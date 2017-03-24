@@ -1,5 +1,5 @@
-var numero1 = "";
-var numero2 = "";
+var numero1 = 0;
+var numero2 = 0;
 var operacion;
 
 //cuando se apreta un numero, esta funcion lo recibe.
@@ -12,27 +12,28 @@ function asignarNumero(numero){
         document.getElementById("textoCalculadora").value = numero1;
 }
 
-
+var memoria;
 
 //Esta funcion se llama cada vez que se presiona un boton de operacion.
 function operar(valor){
-  var valorNumerico;
 	if (numero1 == 0){
 		resultado = parseInt(document.getElementById("textoCalculadora").value);
 	}
-	numero2 = parseFloat(numero1);
+	numero2 = numero1;
 	numero1 = 0;
 	operacion = valor;
+
 }
+
 
 
 
 /****************Funcion para boton igual*******************
 *         suma = 1, resta = 2, multiplicacion = 3,         *
-*         division = 4, exponente = 5                      *
+*         division = 4, exponente = 5 , raiz cuadrada                      *
 ************************************************************/
 function igual(){
-    numero1 = parseFloat(numero1);
+    numero1 = parseFloat(valorNumerico);
 	switch (operacion){
 		case 1:
 			numero1 = numero2 + numero1;

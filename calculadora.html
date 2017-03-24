@@ -6,35 +6,37 @@
   </head>
   <body>
     <div class="calculadora">
+      <h1>Calculadora básica</h1>
+        <p><input type="hidden" id="memoria"></p>
       <form action="#" name="formCalculadora" id="calculadora">
         <p><input type="text" id="textoCalculadora" value="0"></p>
         <p>
-          <input type=reset value="C" name="reset">
+          <input type="reset" value="C" name="reset">
         </p>
         <p>
           <input type="button" value="7" onclick="asignarNumero( '7')"/>
           <input type="button" value="8" onclick="asignarNumero('8')"/>
           <input type="button" value="9" onclick="asignarNumero('9')"/>
-          <input type="button" value="+" onclick="asignarNumero('+'); operar(1)"/>
+          <input type="button" value="+" onclick="asignarNumero('+'); operar(1); desconcatenar('suma')"/>
         </p>
         <p>
           <input type="button" value="4" onclick="asignarNumero('4')"/>
           <input type="button" value="5" onclick="asignarNumero('5')"/>
           <input type="button" value="6" onclick="asignarNumero('6')"/>
-          <input type="button" value="-" onclick="asignarNumero('-'); operar(2)"/>
+          <input type="button" value="-" onclick="asignarNumero('-'); operar(2); desconcatenar('resta')"/>
 
         </p>
         <p>
-          <input type="button" value="1" onclick="asignarNumero('1')" onkeydown=""/>
-          <input type="button" value="2" onclick="asignarNumero('2')" onkeydown=/>
-          <input type="button" value="3" onclick="asignarNumero('3')" onkeydown=""/>
-          <input type="button" value="*" onclick="asignarNumero('*'); operar(3)"/>
+          <input type="button" value="1" onclick="asignarNumero('1')"/>
+          <input type="button" value="2" onclick="asignarNumero('2')"/>
+          <input type="button" value="3" onclick="asignarNumero('3')"/>
+          <input type="button" value="*" onclick="asignarNumero('*'); operar(3); desconcatenar('multiplicacion')"/>
         </p>
         <p>
           <input type="button" value="0" onclick="asignarNumero('0')"/>
           <input type="button" value="." onclick="asignarNumero('.')">
-          <input type="button" value="/"  onclick="asignarNumero('/'); operar(4)"/>
-          <input type="button" value="EXP" onclick="asignarNumero('^'); operar(5)"/>
+          <input type="button" value="/"  onclick="asignarNumero('/'); operar(4); desconcatenar('division')"/>
+          <input type="button" value="EXP" onclick="asignarNumero('^'); operar(5); desconcatenar('')"/>
 
 
         </p>
