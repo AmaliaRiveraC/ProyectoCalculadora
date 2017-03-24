@@ -12,7 +12,6 @@ function asignarNumero(numero){
         document.getElementById("textoCalculadora").value = numero1;
 }
 
-var memoria;
 
 //Esta funcion se llama cada vez que se presiona un boton de operacion.
 function operar(valor){
